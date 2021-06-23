@@ -73,7 +73,10 @@ if operation == '4':
         name = input('what should the name be-')
     for items in range(amount):
         ext = os.path.splitext(src)
-        copy(src, f'{ext[0]} {Number}{ext[1]}')
+        if names.upper() == 'YES':
+            copy(src, f'{name} {Number}{ext[1]}')
+        else:    
+            copy(src, f'{ext[0]} {Number}{ext[1]}')
         Number += 1 
         
     
