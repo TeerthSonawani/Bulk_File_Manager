@@ -1,9 +1,12 @@
 import os
+from shutil import copy
+
 
 operation = input('''
 choose an operation-1)Rename
                     2)Delete
                     3)Create
+                    4)Duplicate
 >>>''')
 if operation == '1':
     Number = 0
@@ -59,6 +62,7 @@ Please Select an option-1)delete using extension
             else:
                 os.remove(items)
             Number += 1
+
 if operation == '4':
     Number = 0
     dst = os.path.abspath(os.getcwd())
@@ -74,3 +78,4 @@ if operation == '4':
         
     
     
+
