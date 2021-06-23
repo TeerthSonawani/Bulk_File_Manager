@@ -59,7 +59,18 @@ Please Select an option-1)delete using extension
             else:
                 os.remove(items)
             Number += 1
-            
+if operation == '4':
+    Number = 0
+    dst = os.path.abspath(os.getcwd())
+    src = input('Which file should be duplicated-')
+    amount = int(input('How many copies-'))
+    names = input('do you want different names?-')
+    if names.upper() == 'YES':
+        name = input('what should the name be-')
+    for items in range(amount):
+        ext = os.path.splitext(src)
+        copy(src, f'{ext[0]} {Number}{ext[1]}')
+        Number += 1 
         
     
     
